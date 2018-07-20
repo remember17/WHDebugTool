@@ -4,7 +4,7 @@
 
     s.name        = "WHDebugTool"
 
-    s.version      = "1.0"
+    s.version      = "1.1"
 
     s.summary      = "Debug tool"
 
