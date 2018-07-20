@@ -39,7 +39,6 @@ static id _instance;
 }
 
 - (void)displayLinkTicks:(CADisplayLink *)link {
-    NSLog(@"~~~~");
     _performTimes ++;
     if (_lastTimestamp == 0) {
         _lastTimestamp = link.timestamp;
