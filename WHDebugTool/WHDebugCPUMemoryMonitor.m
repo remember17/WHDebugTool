@@ -4,7 +4,7 @@
 //
 //  Created by wuhao on 2018/7/17.
 //  Copyright © 2018年 wuhao. All rights reserved.
-//
+//  https://github.com/remember17/WHDebugTool
 
 #import "WHDebugCPUMemoryMonitor.h"
 #import <sys/sysctl.h>
@@ -54,10 +54,6 @@ static id _instance;
     if (self.cpuBlock) {
         self.cpuBlock(cpu_usage());
     }
-}
-
-- (void)dealloc {
-    [self stopMonitoring];
 }
 
 #pragma mark - 获取CPU使用情况

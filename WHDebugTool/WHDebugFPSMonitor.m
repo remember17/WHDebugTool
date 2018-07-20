@@ -4,7 +4,7 @@
 //
 //  Created by wuhao on 2018/7/17.
 //  Copyright © 2018年 wuhao. All rights reserved.
-//
+//  https://github.com/remember17/WHDebugTool
 
 #import "WHDebugFPSMonitor.h"
 
@@ -39,6 +39,7 @@ static id _instance;
 }
 
 - (void)displayLinkTicks:(CADisplayLink *)link {
+    NSLog(@"~~~~");
     _performTimes ++;
     if (_lastTimestamp == 0) {
         _lastTimestamp = link.timestamp;
@@ -57,10 +58,6 @@ static id _instance;
 
 - (void)stopMonitoring {
     [_displayLink invalidate];
-}
-
-- (void)dealloc {
-    [self stopMonitoring];
 }
 
 @end

@@ -4,7 +4,7 @@
 
     s.name        = "WHDebugTool"
 
-    s.version      = "0.1"
+    s.version      = "1.0"
 
     s.summary      = "Debug tool"
 
@@ -14,7 +14,7 @@
 
     s.author      = { "wuhao" => "503007958@qq.com" }
 
-    s.platform    = :ios, "8.0"
+    s.platform    = :ios, "7.0"
 
     s.source      = { :git => "https://github.com/remember17/WHDebugTool.git", :tag => s.version }
 
