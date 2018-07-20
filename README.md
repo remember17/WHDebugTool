@@ -9,7 +9,7 @@
 
 如果pod找不到WHDebugTool，就先pod setup
 ```objc 
-pod 'WHDebugTool', '~> 1.0'
+pod 'WHDebugTool', '~> 1.1'
 ```
 
 1.2 导入头文件
