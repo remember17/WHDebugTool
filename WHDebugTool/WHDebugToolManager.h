@@ -9,14 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, DebugToolType) {
-    DebugToolTypeAll = 0,   // FPS & Memory & CPU
-    DebugToolTypeFPS,       // FPS
-    DebugToolTypeMemory,    // Memory
-    DebugToolTypeCPU,       // CPU
-    DebugToolTypeFPSMemory, // FPS & Memory
-    DebugToolTypeFPSCPU,    // FPS & CPU
-    DebugToolTypeCPUMemory, // Memory & CPU
+typedef NS_OPTIONS(NSUInteger, DebugToolType) {
+    DebugToolTypeFPS    = 1 << 0,
+    DebugToolTypeCPU    = 1 << 1,
+    DebugToolTypeMemory = 1 << 2,
 };
 
 @interface WHDebugToolManager : NSObject
@@ -24,8 +20,8 @@ typedef NS_ENUM(NSUInteger, DebugToolType) {
 + (instancetype)sharedInstance;
 
 /**
- 开关
- @param type 显示类型
+ switch on/off
+ DebugToolTypeFPS | DebugToolTypeCPU | DebugToolTypeMemory
  */
 - (void)toggleWith:(DebugToolType)type;
 

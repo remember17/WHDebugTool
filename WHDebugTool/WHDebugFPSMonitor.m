@@ -39,19 +39,18 @@ static id _instance;
 }
 
 - (void)displayLinkTicks:(CADisplayLink *)link {
-    _performTimes ++;
     if (_lastTimestamp == 0) {
         _lastTimestamp = link.timestamp;
         return;
     }
+    _performTimes ++;
     NSTimeInterval interval = link.timestamp - _lastTimestamp;
-    if (interval >= 1) {
-        float fps = _performTimes / interval;
-        _performTimes = 0;
-        _lastTimestamp = link.timestamp;
-        if (self.fpsBlock) {
-            self.fpsBlock(fps);
-        }
+    if (interval < 1) { return; }
+    _lastTimestamp = link.timestamp;
+    float fps = _performTimes / interval;
+    _performTimes = 0;
+    if (self.fpsBlock) {
+        self.fpsBlock(fps);
     }
 }
 

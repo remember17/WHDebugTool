@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_OPTIONS(NSUInteger, DebugToolType) {
-    DebugToolTypeFPS = 1 << 0,
-    DebugToolTypeCPU = 1 << 1,
+    DebugToolTypeFPS    = 1 << 0,
+    DebugToolTypeCPU    = 1 << 1,
     DebugToolTypeMemory = 1 << 2,
 };
 
@@ -20,8 +20,8 @@ typedef NS_OPTIONS(NSUInteger, DebugToolType) {
 + (instancetype)sharedInstance;
 
 /**
- 开关
- @param type 显示类型
+ switch on/off
+ DebugToolTypeFPS | DebugToolTypeCPU | DebugToolTypeMemory
  */
 - (void)toggleWith:(DebugToolType)type;
 

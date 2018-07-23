@@ -87,14 +87,14 @@
 		6829FE3421039D480069CEB2 /* WHDebugTool */ = {
 			isa = PBXGroup;
 			children = (
-				6829FE3521039D480069CEB2 /* WHDebugCPUMemoryMonitor.h */,
-				6829FE3621039D480069CEB2 /* WHDebugToolManager.m */,
 				6829FE3721039D480069CEB2 /* WHDebugConsoleLabel.h */,
-				6829FE3821039D480069CEB2 /* WHDebugFPSMonitor.h */,
-				6829FE3921039D480069CEB2 /* WHDebugCPUMemoryMonitor.m */,
-				6829FE3A21039D480069CEB2 /* WHDebugToolManager.h */,
-				6829FE3B21039D480069CEB2 /* WHDebugFPSMonitor.m */,
 				6829FE3C21039D480069CEB2 /* WHDebugConsoleLabel.m */,
+				6829FE3521039D480069CEB2 /* WHDebugCPUMemoryMonitor.h */,
+				6829FE3921039D480069CEB2 /* WHDebugCPUMemoryMonitor.m */,
+				6829FE3821039D480069CEB2 /* WHDebugFPSMonitor.h */,
+				6829FE3B21039D480069CEB2 /* WHDebugFPSMonitor.m */,
+				6829FE3A21039D480069CEB2 /* WHDebugToolManager.h */,
+				6829FE3621039D480069CEB2 /* WHDebugToolManager.m */,
 			);
 			path = WHDebugTool;
 			sourceTree = "<group>";

@@ -13,17 +13,17 @@
 
 #define kDebugIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define kDebugScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kDebugLabelWidth 70     // label宽
-#define kDebugLabelHeight 20    // label高
-#define KDebugMargin 20         // label显示左右间距
+#define kDebugLabelWidth 70
+#define kDebugLabelHeight 20
+#define KDebugMargin 20
 
 @interface WHDebugToolManager()
 
-@property (nonatomic, strong) WHDebugConsoleLabel *memoryLabel;   // 内存
+@property (nonatomic, strong) WHDebugConsoleLabel *memoryLabel;
 
-@property (nonatomic, strong) WHDebugConsoleLabel *fpsLabel;      // FPS
+@property (nonatomic, strong) WHDebugConsoleLabel *fpsLabel;
 
-@property (nonatomic, strong) WHDebugConsoleLabel *cpuLabel;      // CPU
+@property (nonatomic, strong) WHDebugConsoleLabel *cpuLabel;
 
 @property (nonatomic, assign) BOOL isShowing;
 
@@ -42,7 +42,7 @@ static id _instance;
     return _instance;
 }
 
-#pragma mark - 根据类型显示
+#pragma mark - Show with type
 
 - (void)toggleWith:(DebugToolType)type {
     if (self.isShowing) {
@@ -55,74 +55,40 @@ static id _instance;
 - (void)showWith:(DebugToolType)type {
     [self deinitWindow];
     [self setDebugWindow];
-    [[WHDebugCPUMemoryMonitor sharedInstance] startMonitoring];
-    switch (type) {
-        case DebugToolTypeFPS: {
-            [[WHDebugCPUMemoryMonitor sharedInstance] stopMonitoring];
-            [self showFPS];
-        } break;
-        case DebugToolTypeMemory: {
-            [self showMemory];
-        } break;
-        case DebugToolTypeCPU: {
-            [self showCPU];
-        } break;
-        case DebugToolTypeFPSMemory: {
-            [self showFPS];
-            [self showMemory];
-        } break;
-        case DebugToolTypeFPSCPU: {
-            [self showFPS];
-            [self showCPU];
-        } break;
-        case DebugToolTypeCPUMemory: {
-            [self showCPU];
-            [self showMemory];
-        } break;
-        case DebugToolTypeAll: {
-            [self showFPS];
-            [self showMemory];
-            [self showCPU];
-        } break;
-        default:
-            break;
+    
+    if (type & DebugToolTypeMemory ||
+        type & DebugToolTypeCPU) {
+        [[WHDebugCPUMemoryMonitor sharedInstance] startMonitoring];
+    }
+    
+    if (type & DebugToolTypeFPS) {
+        [self showFPS];
+    }
+    
+    if (type & DebugToolTypeMemory) {
+        [self showMemory];
+    }
+    
+    if (type & DebugToolTypeCPU) {
+        [self showCPU];
     }
 }
 
 - (void)hideWith:(DebugToolType)type {
-    switch (type) {
-        case DebugToolTypeFPS: {
-            [self hideFPS];
-        } break;
-        case DebugToolTypeMemory: {
-            [self hideMemory];
-        } break;
-        case DebugToolTypeCPU: {
-            [self hideCPU];
-        } break;
-        case DebugToolTypeFPSMemory: {
-            [self hideFPS];
-            [self hideMemory];
-        } break;
-        case DebugToolTypeFPSCPU: {
-            [self hideFPS];
-            [self hideCPU];
-        } break;
-        case DebugToolTypeCPUMemory: {
-            [self hideCPU];
-            [self hideMemory];
-        } break;
-        case DebugToolTypeAll: {
-            [self hideFPS];
-            [self hideMemory];
-            [self hideCPU];
-        } break;
-        default:
-            break;
+    if (type & DebugToolTypeFPS) {
+        [self hideFPS];
+    }
+    
+    if (type & DebugToolTypeMemory) {
+        [self hideMemory];
+    }
+    
+    if (type & DebugToolTypeCPU) {
+        [self hideCPU];
     }
 }
 
-#pragma mark - window
+#pragma mark - Window
 
 - (void)setDebugWindow {
     CGFloat debugWindowY = kDebugIsiPhoneX ? 30 : 0;
@@ -133,7 +99,7 @@ static id _instance;
     self.debugWindow.hidden = NO;
 }
 
-#pragma mark - 显示
+#pragma mark - Show
 
 - (void)showFPS {
     [[WHDebugFPSMonitor sharedInstance] startMonitoring];
@@ -172,7 +138,7 @@ static id _instance;
     }];
 }
 
-#pragma mark - 隐藏
+#pragma mark - Hide
 
 - (void)hideFPS {
     [UIView animateWithDuration:0.3 animations:^{
