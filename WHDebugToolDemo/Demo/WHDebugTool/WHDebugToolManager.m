@@ -55,70 +55,36 @@ static id _instance;
 - (void)showWith:(DebugToolType)type {
     [self deinitWindow];
     [self setDebugWindow];
-    [[WHDebugCPUMemoryMonitor sharedInstance] startMonitoring];
-    switch (type) {
-        case DebugToolTypeFPS: {
-            [[WHDebugCPUMemoryMonitor sharedInstance] stopMonitoring];
-            [self showFPS];
-        } break;
-        case DebugToolTypeMemory: {
-            [self showMemory];
-        } break;
-        case DebugToolTypeCPU: {
-            [self showCPU];
-        } break;
-        case DebugToolTypeFPSMemory: {
-            [self showFPS];
-            [self showMemory];
-        } break;
-        case DebugToolTypeFPSCPU: {
-            [self showFPS];
-            [self showCPU];
-        } break;
-        case DebugToolTypeCPUMemory: {
-            [self showCPU];
-            [self showMemory];
-        } break;
-        case DebugToolTypeAll: {
-            [self showFPS];
-            [self showMemory];
-            [self showCPU];
-        } break;
-        default:
-            break;
+    
+    if (type & DebugToolTypeMemory ||
+        type & DebugToolTypeCPU) {
+        [[WHDebugCPUMemoryMonitor sharedInstance] startMonitoring];
+    }
+    
+    if (type & DebugToolTypeFPS) {
+        [self showFPS];
+    }
+    
+    if (type & DebugToolTypeMemory) {
+        [self showMemory];
+    }
+    
+    if (type & DebugToolTypeCPU) {
+        [self showCPU];
     }
 }
 
 - (void)hideWith:(DebugToolType)type {
-    switch (type) {
-        case DebugToolTypeFPS: {
-            [self hideFPS];
-        } break;
-        case DebugToolTypeMemory: {
-            [self hideMemory];
-        } break;
-        case DebugToolTypeCPU: {
-            [self hideCPU];
-        } break;
-        case DebugToolTypeFPSMemory: {
-            [self hideFPS];
-            [self hideMemory];
-        } break;
-        case DebugToolTypeFPSCPU: {
-            [self hideFPS];
-            [self hideCPU];
-        } break;
-        case DebugToolTypeCPUMemory: {
-            [self hideCPU];
-            [self hideMemory];
-        } break;
-        case DebugToolTypeAll: {
-            [self hideFPS];
-            [self hideMemory];
-            [self hideCPU];
-        } break;
-        default:
-            break;
+    if (type & DebugToolTypeFPS) {
+        [self hideFPS];
+    }
+    
+    if (type & DebugToolTypeMemory) {
+        [self hideMemory];
+    }
+    
+    if (type & DebugToolTypeCPU) {
+        [self hideCPU];
     }
 }
 
