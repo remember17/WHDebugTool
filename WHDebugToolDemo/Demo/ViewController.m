@@ -22,7 +22,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     // DebugToolTypeFPS | DebugToolTypeMemory | DebugToolTypeCPU
-    [[WHDebugToolManager sharedInstance] toggleWith:DebugToolTypeFPS | DebugToolTypeMemory | DebugToolTypeCPU];
+    [[WHDebugToolManager sharedInstance] toggleWith:DebugToolTypeFPS | DebugToolTypeCPU | DebugToolTypeMemory];
+    
 }
 
 
