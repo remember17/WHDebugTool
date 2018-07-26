@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE14CDE2109AFB000D06BBF /* WHDebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE14CDD2109AFB000D06BBF /* WHDebugController.m */; };
 		6829FE2021039D3B0069CEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6829FE1F21039D3B0069CEB2 /* AppDelegate.m */; };
 		6829FE2321039D3B0069CEB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6829FE2221039D3B0069CEB2 /* ViewController.m */; };
 		6829FE2621039D3B0069CEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6829FE2421039D3B0069CEB2 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FE14CDC2109AFB000D06BBF /* WHDebugController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHDebugController.h; sourceTree = "<group>"; };
+		3FE14CDD2109AFB000D06BBF /* WHDebugController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHDebugController.m; sourceTree = "<group>"; };
 		6829FE1B21039D3B0069CEB2 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6829FE1E21039D3B0069CEB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6829FE1F21039D3B0069CEB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				6829FE3B21039D480069CEB2 /* WHDebugFPSMonitor.m */,
 				6829FE3A21039D480069CEB2 /* WHDebugToolManager.h */,
 				6829FE3621039D480069CEB2 /* WHDebugToolManager.m */,
+				3FE14CDC2109AFB000D06BBF /* WHDebugController.h */,
+				3FE14CDD2109AFB000D06BBF /* WHDebugController.m */,
 			);
 			path = WHDebugTool;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE14CDE2109AFB000D06BBF /* WHDebugController.m in Sources */,
 				6829FE2321039D3B0069CEB2 /* ViewController.m in Sources */,
 				6829FE3F21039D480069CEB2 /* WHDebugFPSMonitor.m in Sources */,
 				6829FE4021039D480069CEB2 /* WHDebugConsoleLabel.m in Sources */,
@@ -317,6 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
