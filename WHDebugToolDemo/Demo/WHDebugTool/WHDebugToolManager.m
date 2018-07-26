@@ -11,6 +11,7 @@
 #import "WHDebugCpuMonitor.h"
 #import "WHDebugMemoryMonitor.h"
 #import "WHDebugConsoleLabel.h"
+#import "WHDebugTempVC.h"
 
 #define kDebugIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define kDebugScreenWidth [UIScreen mainScreen].bounds.size.width
@@ -32,8 +33,6 @@
 @property (nonatomic, assign) BOOL isShowing;
 
 @property(nonatomic, strong) UIWindow *debugWindow;
-
-@property (nonatomic, strong) UIView *maskView;
 
 @end
 
@@ -82,7 +81,7 @@ static id _instance;
     self.debugWindow = [[UIWindow alloc] initWithFrame:CGRectMake(0, debugWindowY, kDebugScreenWidth, kDebugLabelHeight)];
     self.debugWindow.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
     self.debugWindow.windowLevel = UIWindowLevelAlert;
-    self.debugWindow.rootViewController = [UIViewController new];
+    self.debugWindow.rootViewController = [WHDebugTempVC new];
     self.debugWindow.hidden = NO;
 }
 

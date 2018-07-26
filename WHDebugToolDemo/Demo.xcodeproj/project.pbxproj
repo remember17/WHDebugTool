@@ -11,6 +11,7 @@
 		680C096721099EA1000224C2 /* WHDebugCpuMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 680C096621099EA1000224C2 /* WHDebugCpuMonitor.m */; };
 		680C096A21099F97000224C2 /* WHDebugMemoryMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 680C096921099F97000224C2 /* WHDebugMemoryMonitor.m */; };
 		680C096D21099FFD000224C2 /* WHDebugFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 680C096C21099FFD000224C2 /* WHDebugFPSMonitor.m */; };
+		680C09732109BFC0000224C2 /* WHDebugTempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 680C09722109BFC0000224C2 /* WHDebugTempVC.m */; };
 		6829FE2021039D3B0069CEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6829FE1F21039D3B0069CEB2 /* AppDelegate.m */; };
 		6829FE2321039D3B0069CEB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6829FE2221039D3B0069CEB2 /* ViewController.m */; };
 		6829FE2621039D3B0069CEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6829FE2421039D3B0069CEB2 /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 		680C096921099F97000224C2 /* WHDebugMemoryMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHDebugMemoryMonitor.m; sourceTree = "<group>"; };
 		680C096B21099FFD000224C2 /* WHDebugFPSMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHDebugFPSMonitor.h; sourceTree = "<group>"; };
 		680C096C21099FFD000224C2 /* WHDebugFPSMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHDebugFPSMonitor.m; sourceTree = "<group>"; };
+		680C09712109BFC0000224C2 /* WHDebugTempVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHDebugTempVC.h; sourceTree = "<group>"; };
+		680C09722109BFC0000224C2 /* WHDebugTempVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHDebugTempVC.m; sourceTree = "<group>"; };
 		6829FE1B21039D3B0069CEB2 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6829FE1E21039D3B0069CEB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6829FE1F21039D3B0069CEB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				680C096921099F97000224C2 /* WHDebugMemoryMonitor.m */,
 				680C096B21099FFD000224C2 /* WHDebugFPSMonitor.h */,
 				680C096C21099FFD000224C2 /* WHDebugFPSMonitor.m */,
+				680C09712109BFC0000224C2 /* WHDebugTempVC.h */,
+				680C09722109BFC0000224C2 /* WHDebugTempVC.m */,
 				6829FE3A21039D480069CEB2 /* WHDebugToolManager.h */,
 				6829FE3621039D480069CEB2 /* WHDebugToolManager.m */,
 			);
@@ -180,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6829FE2321039D3B0069CEB2 /* ViewController.m in Sources */,
+				680C09732109BFC0000224C2 /* WHDebugTempVC.m in Sources */,
 				680C096A21099F97000224C2 /* WHDebugMemoryMonitor.m in Sources */,
 				680C096121099C41000224C2 /* WHDebugMonitor.m in Sources */,
 				680C096721099EA1000224C2 /* WHDebugCpuMonitor.m in Sources */,
