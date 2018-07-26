@@ -8,7 +8,7 @@ Debug tool🔨
 1.1 Pod或直接把WHDebugTool文件拖入项目
 
 ```objc 
-pod 'WHDebugTool', '~> 1.3'
+pod 'WHDebugTool', '~> 1.5'
 ```
 
 1.2 导入头文件
@@ -36,7 +36,7 @@ Pod的方式:
 // 打开
 - (void)showWith:(DebugToolType)type;
 // 关闭
-- (void)hideWith:(DebugToolType)type;
+- (void)hide;
 ```
 
 ### 2.  参数说明

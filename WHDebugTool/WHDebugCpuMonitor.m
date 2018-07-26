@@ -1,64 +1,19 @@
 //
-//  WHDebugCPUMemoryMonitor.m
-//  WHDebugTool
+//  WHDebugCpuMonitor.m
+//  Demo
 //
-//  Created by wuhao on 2018/7/17.
+//  Created by wuhao on 2018/7/26.
 //  Copyright © 2018年 wuhao. All rights reserved.
 //  https://github.com/remember17/WHDebugTool
 
-#import "WHDebugCPUMemoryMonitor.h"
-#import <sys/sysctl.h>
+#import "WHDebugCpuMonitor.h"
 #import <mach/mach.h>
 
-@implementation WHDebugCPUMemoryMonitor {
-    NSTimer *_timer;
-}
+@implementation WHDebugCpuMonitor
 
-static id _instance;
-+ (instancetype)sharedInstance {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [[self alloc] init];
-    });
-    return _instance;
-}
+WHSingletonM()
 
-- (float)getUsedMemory {
-    task_basic_info_data_t taskInfo;
-    mach_msg_type_number_t infoCount = TASK_BASIC_INFO_COUNT;
-    kern_return_t kernReturn = task_info(mach_task_self(),
-                                         TASK_BASIC_INFO,
-                                         (task_info_t)&taskInfo,
-                                         &infoCount);
-    if (kernReturn != KERN_SUCCESS) { return NSNotFound; }
-    return taskInfo.resident_size/1024.0/1024.0;
-}
-
-- (void)startMonitoring {
-    [self stopMonitoring];
-    _timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(updateMemory) userInfo:nil repeats:YES];
-    [_timer fire];
-    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
-}
-
-- (void)stopMonitoring {
-    [_timer invalidate];
-    _timer = nil;
-}
-
-- (void)updateMemory {
-    float usedValue = [self getUsedMemory];
-    if (self.memeryBlock) {
-        self.memeryBlock(usedValue);
-    }
-    if (self.cpuBlock) {
-        self.cpuBlock(cpu_usage());
-    }
-}
-
-#pragma mark - 获取CPU使用情况
-
-float cpu_usage() {
+- (float)getValue {
     kern_return_t kr;
     task_info_data_t tinfo;
     mach_msg_type_number_t task_info_count;

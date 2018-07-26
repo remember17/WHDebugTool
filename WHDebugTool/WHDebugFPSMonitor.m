@@ -1,8 +1,8 @@
 //
 //  WHDebugFPSMonitor.m
-//  WHDebugTool
+//  Demo
 //
-//  Created by wuhao on 2018/7/17.
+//  Created by wuhao on 2018/7/26.
 //  Copyright © 2018年 wuhao. All rights reserved.
 //  https://github.com/remember17/WHDebugTool
 
@@ -20,20 +20,9 @@
 
 @implementation WHDebugFPSMonitor
 
-static id _instance;
-+ (instancetype)sharedInstance {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [[self alloc] init];
-    });
-    return _instance;
-}
+WHSingletonM()
 
 - (void)startMonitoring {
-    [self setDisplayLink];
-}
-
-- (void)setDisplayLink {
     _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkTicks:)];
     [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
@@ -49,8 +38,8 @@ static id _instance;
     _lastTimestamp = link.timestamp;
     float fps = _performTimes / interval;
     _performTimes = 0;
-    if (self.fpsBlock) {
-        self.fpsBlock(fps);
+    if (self.valueBlock) {
+        self.valueBlock(fps);
     }
 }
 

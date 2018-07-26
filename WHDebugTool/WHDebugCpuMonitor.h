@@ -1,5 +1,5 @@
 //
-//  WHDebugFPSMonitor.h
+//  WHDebugCpuMonitor.h
 //  Demo
 //
 //  Created by wuhao on 2018/7/26.
@@ -7,8 +7,7 @@
 //  https://github.com/remember17/WHDebugTool
 
 #import "WHDebugMonitor.h"
-#import <UIKit/UIKit.h>
 
-@interface WHDebugFPSMonitor : WHDebugMonitor
+@interface WHDebugCpuMonitor : WHDebugMonitor
 
 @end
