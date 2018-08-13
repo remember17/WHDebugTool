@@ -14,14 +14,13 @@
 WHSingletonM()
 
 - (float)getValue {
-    task_basic_info_data_t taskInfo;
-    mach_msg_type_number_t infoCount = TASK_BASIC_INFO_COUNT;
-    kern_return_t kernReturn = task_info(mach_task_self(),
-                                         TASK_BASIC_INFO,
-                                         (task_info_t)&taskInfo,
-                                         &infoCount);
+    int64_t memoryUsageInByte = 0;
+    task_vm_info_data_t vmInfo;
+    mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
+    kern_return_t kernReturn = task_info(mach_task_self(), TASK_VM_INFO, (task_info_t) &vmInfo, &count);
     if (kernReturn != KERN_SUCCESS) { return NSNotFound; }
-    return taskInfo.resident_size/1024.0/1024.0;
+    memoryUsageInByte = (int64_t) vmInfo.phys_footprint;
+    return memoryUsageInByte/1024.0/1024.0;
 }
 
 @end

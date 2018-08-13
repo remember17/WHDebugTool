@@ -9,7 +9,7 @@ Debug tool🔨
 1.1 Pod或直接把WHDebugTool文件拖入项目
 
 ```objc 
-pod 'WHDebugTool', '~> 1.5'
+pod 'WHDebugTool', '~> 1.6'
 ```
 
 1.2 导入头文件
@@ -29,7 +29,7 @@ Pod的方式:
 一行代码开启或关闭监测。
 ```objc
 // 这个方法调用的时候会判断监测是不是处于打开的状态，如果打开了则关闭，如果没有打开就开启。
-[[WHDebugToolManager sharedInstance] toggleWith:DebugToolTypeFPS | DebugToolTypeMemory | DebugToolTypeCPU];
+[[WHDebugToolManager sharedInstance] toggleWith: DebugToolTypeAll];
 ```
 
 1.4 可选：也可以通过如下方式初始化和关闭
@@ -48,4 +48,5 @@ Pod的方式:
 DebugToolTypeFPS    = 1 << 0,
 DebugToolTypeCPU    = 1 << 1,
 DebugToolTypeMemory = 1 << 2,
+DebugToolTypeAll    = (DebugToolTypeFPS | DebugToolTypeCPU | DebugToolTypeMemory)
 ```

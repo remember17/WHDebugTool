@@ -13,6 +13,7 @@ typedef NS_OPTIONS(NSUInteger, DebugToolType) {
     DebugToolTypeFPS    = 1 << 0,
     DebugToolTypeCPU    = 1 << 1,
     DebugToolTypeMemory = 1 << 2,
+    DebugToolTypeAll    = (DebugToolTypeFPS | DebugToolTypeCPU | DebugToolTypeMemory)
 };
 
 @interface WHDebugToolManager : NSObject
