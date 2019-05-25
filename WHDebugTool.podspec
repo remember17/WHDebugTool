@@ -1,10 +1,9 @@
 
-
     Pod::Spec.new do |s|
 
     s.name        = "WHDebugTool"
 
-    s.version      = "1.6"
+    s.version      = "1.7"
 
     s.summary      = "Debug tool"
 
@@ -14,7 +13,7 @@
 
     s.author      = { "wuhao" => "503007958@qq.com" }
 
-    s.platform    = :ios, "7.0"
+    s.platform    = :ios, "8.0"
 
     s.source      = { :git => "https://github.com/remember17/WHDebugTool.git", :tag => s.version }
 
