@@ -18,12 +18,48 @@ typedef NS_OPTIONS(NSUInteger, DebugToolType) {
 
 @interface WHDebugToolManager : NSObject
 
+/** switch on/off */
++ (void)toggleWith:(DebugToolType)type;
+
++ (void)showWith:(DebugToolType)type;
+
++ (void)hide;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 + (instancetype)sharedInstance;
 
-/**
- switch on/off
- DebugToolTypeFPS | DebugToolTypeCPU | DebugToolTypeMemory
- */
 - (void)toggleWith:(DebugToolType)type;
 
 - (void)showWith:(DebugToolType)type;

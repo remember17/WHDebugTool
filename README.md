@@ -1,8 +1,5 @@
 # WHDebugTool
 
-Debug tool🔨
-欢迎调试工具类的代码commit！
-
 ![Debug](https://upload-images.jianshu.io/upload_images/3873004-abada48f188a2408.gif?imageMogr2/auto-orient/strip)
 
 ### 1、快速使用
@@ -10,7 +7,7 @@ Debug tool🔨
 1.1 Pod或直接把WHDebugTool文件拖入项目
 
 ```objc 
-pod 'WHDebugTool', '~> 1.7'
+pod 'WHDebugTool', '~> 2.0'
 ```
 
 1.2 导入头文件
@@ -30,15 +27,15 @@ Pod的方式:
 一行代码开启或关闭监测。
 ```objc
 // 这个方法调用的时候会判断监测是不是处于打开的状态，如果打开了则关闭，如果没有打开就开启。
-[[WHDebugToolManager sharedInstance] toggleWith: DebugToolTypeAll];
+[WHDebugToolManager toggleWith:DebugToolTypeAll];
 ```
 
 1.4 可选：也可以通过如下方式初始化和关闭
 ```objc
 // 打开
-- (void)showWith:(DebugToolType)type;
++ (void)showWith:(DebugToolType)type;
 // 关闭
-- (void)hide;
++ (void)hide;
 ```
 
 ### 2.  参数说明

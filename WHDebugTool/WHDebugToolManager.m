@@ -13,7 +13,9 @@
 #import "WHDebugConsoleLabel.h"
 #import "WHDebugTempVC.h"
 
-static inline BOOL debugIsIphoneX() {
+#define kDebugScreenWidth [UIScreen mainScreen].bounds.size.width
+
+static inline BOOL debugTool_iPhoneX() {
     BOOL result = NO;
     if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
         return result;
@@ -26,27 +28,17 @@ static inline BOOL debugIsIphoneX() {
     }
     return result;
 }
-#define kDebugIsiPhoneX (debugIsIphoneX())
-#define kDebugScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kDebugLabelWidth 70
-#define kDebugLabelHeight 20
-#define KDebugMargin 20
-#define kMemoryOriginFrame CGRectMake(-kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight)
-#define kFpsOriginFrame CGRectMake(kDebugScreenWidth + kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight)
-#define kCpuOriginFrame CGRectMake((kDebugScreenWidth - kDebugLabelWidth) / 2, -kDebugLabelHeight, kDebugLabelWidth, kDebugLabelHeight)
+
+static NSInteger const kDebugLabelWidth = 70;
+static NSInteger const kDebugLabelHeight = 20;
+static NSInteger const KDebugMargin = 20;
 
 @interface WHDebugToolManager()
-
-@property (nonatomic, strong) WHDebugConsoleLabel *memoryLabel;
-
-@property (nonatomic, strong) WHDebugConsoleLabel *fpsLabel;
-
-@property (nonatomic, strong) WHDebugConsoleLabel *cpuLabel;
-
 @property (nonatomic, assign) BOOL isShowing;
-
 @property(nonatomic, strong) UIWindow *debugWindow;
-
+@property (nonatomic, strong) WHDebugConsoleLabel *memoryLabel;
+@property (nonatomic, strong) WHDebugConsoleLabel *fpsLabel;
+@property (nonatomic, strong) WHDebugConsoleLabel *cpuLabel;
 @end
 
 @implementation WHDebugToolManager
@@ -58,6 +50,20 @@ static id _instance;
         _instance = [[self alloc] init];
     });
     return _instance;
+}
+
+#pragma mark - Class function
+
++ (void)toggleWith:(DebugToolType)type {
+    [[self sharedInstance] toggleWith:type];
+}
+
++ (void)showWith:(DebugToolType)type {
+    [[self sharedInstance] showWith:type];
+}
+
++ (void)hide {
+    [[self sharedInstance] hide];
 }
 
 #pragma mark - Show with type
@@ -90,7 +96,7 @@ static id _instance;
 #pragma mark - Window
 
 - (void)setDebugWindow {
-    CGFloat debugWindowY = kDebugIsiPhoneX ? 30 : 0;
+    CGFloat debugWindowY = debugTool_iPhoneX() ? 30 : 0;
     self.debugWindow = [[UIWindow alloc] initWithFrame:CGRectMake(0, debugWindowY, kDebugScreenWidth, kDebugLabelHeight)];
     self.debugWindow.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
     self.debugWindow.windowLevel = UIWindowLevelAlert;
@@ -145,9 +151,9 @@ static id _instance;
 
 - (void)hide {
     [UIView animateWithDuration:0.3 animations:^{
-        self.cpuLabel.frame = kCpuOriginFrame;
-        self.memoryLabel.frame = kMemoryOriginFrame;
-        self.fpsLabel.frame = kFpsOriginFrame;
+        self.cpuLabel.frame = CGRectMake((kDebugScreenWidth - kDebugLabelWidth) / 2, -kDebugLabelHeight, kDebugLabelWidth, kDebugLabelHeight);
+        self.memoryLabel.frame = CGRectMake(-kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight);
+        self.fpsLabel.frame = CGRectMake(kDebugScreenWidth + kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight);
     }completion:^(BOOL finished) {
         [self clearUp];
     }];
@@ -174,21 +180,21 @@ static id _instance;
 
 - (WHDebugConsoleLabel *)memoryLabel {
     if (!_memoryLabel) {
-        _memoryLabel = [[WHDebugConsoleLabel alloc] initWithFrame:kMemoryOriginFrame];
+        _memoryLabel = [[WHDebugConsoleLabel alloc] initWithFrame:CGRectMake(-kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight)];
     }
     return _memoryLabel;
 }
 
 -(WHDebugConsoleLabel *)cpuLabel {
     if (!_cpuLabel) {
-        _cpuLabel = [[WHDebugConsoleLabel alloc] initWithFrame:kCpuOriginFrame];
+        _cpuLabel = [[WHDebugConsoleLabel alloc] initWithFrame:CGRectMake((kDebugScreenWidth - kDebugLabelWidth) / 2, -kDebugLabelHeight, kDebugLabelWidth, kDebugLabelHeight)];
     }
     return _cpuLabel;
 }
 
 - (WHDebugConsoleLabel *)fpsLabel {
     if (!_fpsLabel) {
-        _fpsLabel = [[WHDebugConsoleLabel alloc] initWithFrame:kFpsOriginFrame];
+        _fpsLabel = [[WHDebugConsoleLabel alloc] initWithFrame:CGRectMake(kDebugScreenWidth + kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight)];
     }
     return _fpsLabel;
 }

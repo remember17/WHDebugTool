@@ -12,8 +12,9 @@
 @implementation ViewController
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    // DebugToolTypeMemory | DebugToolTypeCPU | DebugToolTypeFPS
-    [[WHDebugToolManager sharedInstance] toggleWith:DebugToolTypeAll];
+    
+    [WHDebugToolManager toggleWith:DebugToolTypeAll];
+    
 }
 
 @end
