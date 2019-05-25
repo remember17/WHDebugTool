@@ -50,6 +50,7 @@
     }
 }
 
+
 #pragma mark - NSAttributedString
 
 - (NSAttributedString *)fpsAttributedStringWith:(float)fps {

@@ -5,7 +5,7 @@
 
     s.version      = "2.1"
 
-    s.summary      = "Debug tool"
+    s.summary      = "Debug tool for iOS"
 
     s.homepage    = "https://github.com/remember17/WHDebugTool"
 
