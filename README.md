@@ -1,5 +1,7 @@
 # WHDebugTool
 
+[WHDebugTool介绍](https://www.jianshu.com/p/0d94a81a31db)
+
 ![Debug](https://upload-images.jianshu.io/upload_images/3873004-abada48f188a2408.gif?imageMogr2/auto-orient/strip)
 
 ### 1、快速使用
