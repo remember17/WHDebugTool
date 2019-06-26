@@ -35,13 +35,19 @@ static NSInteger const KDebugMargin = 20;
 
 @interface WHDebugToolManager()
 @property (nonatomic, assign) BOOL isShowing;
-@property(nonatomic, strong) UIWindow *debugWindow;
+@property (nonatomic, strong) UIWindow *debugWindow;
 @property (nonatomic, strong) WHDebugConsoleLabel *memoryLabel;
 @property (nonatomic, strong) WHDebugConsoleLabel *fpsLabel;
 @property (nonatomic, strong) WHDebugConsoleLabel *cpuLabel;
+@property (nonatomic, assign) DebugToolType type;
 @end
 
 @implementation WHDebugToolManager
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 static id _instance;
 + (instancetype)sharedInstance {
@@ -50,6 +56,26 @@ static id _instance;
         _instance = [[self alloc] init];
     });
     return _instance;
+}
+
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
+    }
+    return self;
+}
+
+- (void)deviceOrientationChange:(NSNotification *)noti
+{
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    if (orientation == UIInterfaceOrientationUnknown ) {
+        return;
+    }
+    CGFloat debugWindowY = debugTool_iPhoneX() ? 30 : 0;
+    self.debugWindow.frame = CGRectMake(0, debugWindowY, UIScreen.mainScreen.bounds.size.width, kDebugLabelHeight);
+    [self showWith:DebugToolTypeAll];
 }
 
 #pragma mark - Class function
@@ -69,6 +95,7 @@ static id _instance;
 #pragma mark - Show with type
 
 - (void)toggleWith:(DebugToolType)type {
+    self.type = type;
     if (self.isShowing) {
         [self hide];
     } else {
@@ -77,6 +104,7 @@ static id _instance;
 }
 
 - (void)showWith:(DebugToolType)type {
+    self.type = type;
     [self clearUp];
     [self setDebugWindow];
     
