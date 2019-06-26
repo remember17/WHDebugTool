@@ -75,7 +75,7 @@ static id _instance;
     }
     CGFloat debugWindowY = debugTool_iPhoneX() ? 30 : 0;
     self.debugWindow.frame = CGRectMake(0, debugWindowY, UIScreen.mainScreen.bounds.size.width, kDebugLabelHeight);
-    [self showWith:DebugToolTypeAll];
+    [self showWith:self.type];
 }
 
 #pragma mark - Class function
