@@ -44,8 +44,7 @@ static NSInteger const KDebugMargin = 20;
 
 @implementation WHDebugToolManager
 
-- (void)dealloc
-{
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -58,17 +57,14 @@ static id _instance;
     return _instance;
 }
 
-
-- (instancetype)init
-{
+- (instancetype)init {
     if (self = [super init]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
     }
     return self;
 }
 
-- (void)deviceOrientationChange:(NSNotification *)noti
-{
+- (void)deviceOrientationChange:(NSNotification *)noti {
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     if (orientation == UIInterfaceOrientationUnknown ) {
         return;
