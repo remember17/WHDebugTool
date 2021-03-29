@@ -1,0 +1,16 @@
+PODS:
+  - WHDebugTool (2.1)
+
+DEPENDENCIES:
+  - WHDebugTool (from `../`)
+
+EXTERNAL SOURCES:
+  WHDebugTool:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WHDebugTool: 93b0a99e3b47e57f94b91c407b4a4c5bfaaec531
+
+PODFILE CHECKSUM: e2b43d48065aa29291af0a7fb5ce46e77e27f812
+
+COCOAPODS: 1.7.2

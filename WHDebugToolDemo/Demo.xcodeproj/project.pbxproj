@@ -3,36 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		680C096121099C41000224C2 /* WHDebugMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 680C096021099C41000224C2 /* WHDebugMonitor.m */; };
-		680C096721099EA1000224C2 /* WHDebugCpuMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 680C096621099EA1000224C2 /* WHDebugCpuMonitor.m */; };
-		680C096A21099F97000224C2 /* WHDebugMemoryMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 680C096921099F97000224C2 /* WHDebugMemoryMonitor.m */; };
-		680C096D21099FFD000224C2 /* WHDebugFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 680C096C21099FFD000224C2 /* WHDebugFPSMonitor.m */; };
-		680C09732109BFC0000224C2 /* WHDebugTempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 680C09722109BFC0000224C2 /* WHDebugTempVC.m */; };
 		6829FE2021039D3B0069CEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6829FE1F21039D3B0069CEB2 /* AppDelegate.m */; };
 		6829FE2321039D3B0069CEB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6829FE2221039D3B0069CEB2 /* ViewController.m */; };
 		6829FE2621039D3B0069CEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6829FE2421039D3B0069CEB2 /* Main.storyboard */; };
 		6829FE2821039D3C0069CEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6829FE2721039D3C0069CEB2 /* Assets.xcassets */; };
 		6829FE2B21039D3C0069CEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6829FE2921039D3C0069CEB2 /* LaunchScreen.storyboard */; };
 		6829FE2E21039D3D0069CEB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6829FE2D21039D3D0069CEB2 /* main.m */; };
-		6829FE3D21039D480069CEB2 /* WHDebugToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6829FE3621039D480069CEB2 /* WHDebugToolManager.m */; };
-		6829FE4021039D480069CEB2 /* WHDebugConsoleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6829FE3C21039D480069CEB2 /* WHDebugConsoleLabel.m */; };
+		927A82A6F2B1A042718B69A1 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48569636120E60DF825D7856 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		680C095F21099C41000224C2 /* WHDebugMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHDebugMonitor.h; sourceTree = "<group>"; };
-		680C096021099C41000224C2 /* WHDebugMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHDebugMonitor.m; sourceTree = "<group>"; };
-		680C096521099EA1000224C2 /* WHDebugCpuMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHDebugCpuMonitor.h; sourceTree = "<group>"; };
-		680C096621099EA1000224C2 /* WHDebugCpuMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHDebugCpuMonitor.m; sourceTree = "<group>"; };
-		680C096821099F97000224C2 /* WHDebugMemoryMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHDebugMemoryMonitor.h; sourceTree = "<group>"; };
-		680C096921099F97000224C2 /* WHDebugMemoryMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHDebugMemoryMonitor.m; sourceTree = "<group>"; };
-		680C096B21099FFD000224C2 /* WHDebugFPSMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHDebugFPSMonitor.h; sourceTree = "<group>"; };
-		680C096C21099FFD000224C2 /* WHDebugFPSMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHDebugFPSMonitor.m; sourceTree = "<group>"; };
-		680C09712109BFC0000224C2 /* WHDebugTempVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHDebugTempVC.h; sourceTree = "<group>"; };
-		680C09722109BFC0000224C2 /* WHDebugTempVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHDebugTempVC.m; sourceTree = "<group>"; };
+		48569636120E60DF825D7856 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6829FE1B21039D3B0069CEB2 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6829FE1E21039D3B0069CEB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6829FE1F21039D3B0069CEB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,10 +28,8 @@
 		6829FE2A21039D3C0069CEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6829FE2C21039D3D0069CEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6829FE2D21039D3D0069CEB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6829FE3621039D480069CEB2 /* WHDebugToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugToolManager.m; sourceTree = "<group>"; };
-		6829FE3721039D480069CEB2 /* WHDebugConsoleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugConsoleLabel.h; sourceTree = "<group>"; };
-		6829FE3A21039D480069CEB2 /* WHDebugToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugToolManager.h; sourceTree = "<group>"; };
-		6829FE3C21039D480069CEB2 /* WHDebugConsoleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugConsoleLabel.m; sourceTree = "<group>"; };
+		A2F943699838843A5E5DAD84 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		B452D57A01D523A9528CAFD4 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927A82A6F2B1A042718B69A1 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DE89F3FE472EAC6009AE08C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48569636120E60DF825D7856 /* Pods_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6829FE1221039D3B0069CEB2 = {
 			isa = PBXGroup;
 			children = (
 				6829FE1D21039D3B0069CEB2 /* Demo */,
 				6829FE1C21039D3B0069CEB2 /* Products */,
+				84C5F5C39C75C424CD7AF627 /* Pods */,
+				5DE89F3FE472EAC6009AE08C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,7 +73,6 @@
 		6829FE1D21039D3B0069CEB2 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				6829FE3421039D480069CEB2 /* WHDebugTool */,
 				6829FE1E21039D3B0069CEB2 /* AppDelegate.h */,
 				6829FE1F21039D3B0069CEB2 /* AppDelegate.m */,
 				6829FE2121039D3B0069CEB2 /* ViewController.h */,
@@ -93,25 +86,13 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		6829FE3421039D480069CEB2 /* WHDebugTool */ = {
+		84C5F5C39C75C424CD7AF627 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6829FE3721039D480069CEB2 /* WHDebugConsoleLabel.h */,
-				6829FE3C21039D480069CEB2 /* WHDebugConsoleLabel.m */,
-				680C096521099EA1000224C2 /* WHDebugCpuMonitor.h */,
-				680C096621099EA1000224C2 /* WHDebugCpuMonitor.m */,
-				680C096B21099FFD000224C2 /* WHDebugFPSMonitor.h */,
-				680C096C21099FFD000224C2 /* WHDebugFPSMonitor.m */,
-				680C096821099F97000224C2 /* WHDebugMemoryMonitor.h */,
-				680C096921099F97000224C2 /* WHDebugMemoryMonitor.m */,
-				680C095F21099C41000224C2 /* WHDebugMonitor.h */,
-				680C096021099C41000224C2 /* WHDebugMonitor.m */,
-				680C09712109BFC0000224C2 /* WHDebugTempVC.h */,
-				680C09722109BFC0000224C2 /* WHDebugTempVC.m */,
-				6829FE3A21039D480069CEB2 /* WHDebugToolManager.h */,
-				6829FE3621039D480069CEB2 /* WHDebugToolManager.m */,
+				A2F943699838843A5E5DAD84 /* Pods-Demo.debug.xcconfig */,
+				B452D57A01D523A9528CAFD4 /* Pods-Demo.release.xcconfig */,
 			);
-			path = WHDebugTool;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6829FE3121039D3D0069CEB2 /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
+				BCF66C5AC950F547A4537499 /* [CP] Check Pods Manifest.lock */,
 				6829FE1721039D3B0069CEB2 /* Sources */,
 				6829FE1821039D3B0069CEB2 /* Frameworks */,
 				6829FE1921039D3B0069CEB2 /* Resources */,
+				9E8F972E0289581107021597 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,20 +162,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9E8F972E0289581107021597 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCF66C5AC950F547A4537499 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6829FE1721039D3B0069CEB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6829FE2321039D3B0069CEB2 /* ViewController.m in Sources */,
-				680C09732109BFC0000224C2 /* WHDebugTempVC.m in Sources */,
-				680C096A21099F97000224C2 /* WHDebugMemoryMonitor.m in Sources */,
-				680C096121099C41000224C2 /* WHDebugMonitor.m in Sources */,
-				680C096721099EA1000224C2 /* WHDebugCpuMonitor.m in Sources */,
-				6829FE4021039D480069CEB2 /* WHDebugConsoleLabel.m in Sources */,
 				6829FE2E21039D3D0069CEB2 /* main.m in Sources */,
-				6829FE3D21039D480069CEB2 /* WHDebugToolManager.m in Sources */,
-				680C096D21099FFD000224C2 /* WHDebugFPSMonitor.m in Sources */,
 				6829FE2021039D3B0069CEB2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +349,7 @@
 		};
 		6829FE3221039D3D0069CEB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2F943699838843A5E5DAD84 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -347,6 +366,7 @@
 		};
 		6829FE3321039D3D0069CEB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B452D57A01D523A9528CAFD4 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
