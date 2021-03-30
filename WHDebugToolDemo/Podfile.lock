@@ -1,5 +1,5 @@
 PODS:
-  - WHDebugTool (2.1)
+  - WHDebugTool (2.2)
 
 DEPENDENCIES:
   - WHDebugTool (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WHDebugTool: 93b0a99e3b47e57f94b91c407b4a4c5bfaaec531
+  WHDebugTool: 81976cee8d2e3e28451d9efbea737fcbf6222076
 
 PODFILE CHECKSUM: e2b43d48065aa29291af0a7fb5ce46e77e27f812
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.10.1
