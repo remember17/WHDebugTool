@@ -7,7 +7,7 @@
 1.1 Pod或直接把WHDebugTool文件拖入项目
 
 ```objc 
-pod 'WHDebugTool', '~>2.2'
+pod 'WHDebugTool', '~> 2.3'
 ```
 
 1.2 导入头文件`WHDebugToolManager.h`
