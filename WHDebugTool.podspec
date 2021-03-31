@@ -3,7 +3,7 @@
 
     s.name        = "WHDebugTool"
 
-    s.version      = "2.3"
+    s.version      = "2.4"
 
     s.summary      = "Debug tool for iOS"
 
