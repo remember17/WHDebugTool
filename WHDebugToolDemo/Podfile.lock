@@ -1,5 +1,5 @@
 PODS:
-  - WHDebugTool (2.2)
+  - WHDebugTool (2.3)
 
 DEPENDENCIES:
   - WHDebugTool (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WHDebugTool: 81976cee8d2e3e28451d9efbea737fcbf6222076
+  WHDebugTool: 084ac685662b2e543dd88293bd3d6c0336c707be
 
 PODFILE CHECKSUM: 364026909f043859396b5750d6038ba2b73d8f9d
 

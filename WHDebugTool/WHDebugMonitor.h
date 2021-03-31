@@ -22,12 +22,11 @@ typedef void(^UpdateValueBlock)(float value);
 
 @interface WHDebugMonitor : NSObject
 
+@property (nonatomic, copy) UpdateValueBlock valueBlock;
+
 WHSingletonH()
 
 - (void)startMonitoring;
-
 - (void)stopMonitoring;
-
-@property (nonatomic, copy) UpdateValueBlock valueBlock;
 
 @end

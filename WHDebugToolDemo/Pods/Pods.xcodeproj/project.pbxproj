@@ -368,73 +368,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2FB3474DC459F064FEB706F0A0553A79 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1E06F113F5884F8F5A8DE4E59B37BAD /* WHDebugTool.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WHDebugTool/WHDebugTool-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WHDebugTool/WHDebugTool-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/WHDebugTool/WHDebugTool.modulemap";
-				PRODUCT_MODULE_NAME = WHDebugTool;
-				PRODUCT_NAME = WHDebugTool;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6B541FF21187B2591975F00D15D5B1E0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFF7F09D97D61E4C7153083C74978334 /* WHDebugTool.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WHDebugTool/WHDebugTool-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WHDebugTool/WHDebugTool-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/WHDebugTool/WHDebugTool.modulemap";
-				PRODUCT_MODULE_NAME = WHDebugTool;
-				PRODUCT_NAME = WHDebugTool;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		71243899B61152433AAE34EE86456EE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -563,6 +496,75 @@
 			};
 			name = Debug;
 		};
+		86EEAF5B2D77E658470D33FE85B02EC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFF7F09D97D61E4C7153083C74978334 /* WHDebugTool.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WHDebugTool/WHDebugTool-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WHDebugTool/WHDebugTool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WHDebugTool/WHDebugTool.modulemap";
+				PRODUCT_MODULE_NAME = WHDebugTool;
+				PRODUCT_NAME = WHDebugTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CBE5DEAFEF203A95757524CA6AB6FC94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1E06F113F5884F8F5A8DE4E59B37BAD /* WHDebugTool.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WHDebugTool/WHDebugTool-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WHDebugTool/WHDebugTool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WHDebugTool/WHDebugTool.modulemap";
+				PRODUCT_MODULE_NAME = WHDebugTool;
+				PRODUCT_NAME = WHDebugTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		E8F6C6ACD388753EE92A4A0ED4429609 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2A55EEF2B9A6037A11AFCECF4E0C48C /* Pods-WHDebugToolDemo.release.xcconfig */;
@@ -653,8 +655,8 @@
 		C01E5C88C0E6B8F7B1C5854CD037324F /* Build configuration list for PBXNativeTarget "WHDebugTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FB3474DC459F064FEB706F0A0553A79 /* Debug */,
-				6B541FF21187B2591975F00D15D5B1E0 /* Release */,
+				CBE5DEAFEF203A95757524CA6AB6FC94 /* Debug */,
+				86EEAF5B2D77E658470D33FE85B02EC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

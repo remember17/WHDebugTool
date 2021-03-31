@@ -9,13 +9,9 @@
 #import "WHDebugFPSMonitor.h"
 
 @interface WHDebugFPSMonitor()
-
 @property (nonatomic, strong) CADisplayLink *displayLink;
-
 @property (nonatomic, assign) NSTimeInterval lastTimestamp;
-
 @property (nonatomic, assign) NSInteger performTimes;
-
 @end
 
 @implementation WHDebugFPSMonitor

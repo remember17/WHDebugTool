@@ -23,7 +23,10 @@ static inline UIWindow* debugTool_currentWindow() {
             }
         }
     } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         window = [UIApplication sharedApplication].keyWindow;
+#pragma clang diagnostic pop
     }
     return window;
 }
