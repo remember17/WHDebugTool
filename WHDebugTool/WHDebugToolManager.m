@@ -13,7 +13,23 @@
 #import "WHDebugConsoleLabel.h"
 #import "WHDebugTempVC.h"
 
+static inline UIWindow* debugTool_currentWindow() {
+    UIWindow* window = nil;
+    if (@available(iOS 13.0, *)) {
+        for (UIWindowScene* windowScene in [UIApplication sharedApplication].connectedScenes) {
+            if (windowScene.activationState == UISceneActivationStateForegroundActive) {
+                window = windowScene.windows.firstObject;
+                break;
+            }
+        }
+    } else {
+        window = [UIApplication sharedApplication].keyWindow;
+    }
+    return window;
+}
+
 #define kDebugScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KDebugCurrentWindow (debugTool_currentWindow())
 
 static inline BOOL debugTool_iPhoneX() {
     BOOL result = NO;
@@ -21,8 +37,7 @@ static inline BOOL debugTool_iPhoneX() {
         return result;
     }
     if (@available(iOS 11.0, *)) {
-        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
-        if (mainWindow.safeAreaInsets.bottom > 0.0) {
+        if (KDebugCurrentWindow.safeAreaInsets.bottom > 0.0) {
             result = YES;
         }
     }
@@ -126,6 +141,7 @@ static id _instance;
     self.debugWindow.windowLevel = UIWindowLevelAlert;
     self.debugWindow.rootViewController = [WHDebugTempVC new];
     self.debugWindow.hidden = NO;
+    [KDebugCurrentWindow addSubview:self.debugWindow];
 }
 
 #pragma mark - Show

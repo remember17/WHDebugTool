@@ -28,36 +28,6 @@ typedef NS_OPTIONS(NSUInteger, DebugToolType) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 + (instancetype)sharedInstance;
 
 - (void)toggleWith:(DebugToolType)type;
