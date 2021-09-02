@@ -176,12 +176,13 @@ static id _instance;
 - (void)show:(WHDebugConsoleLabel *)consoleLabel {
     [self.debugWindow addSubview:consoleLabel];
     CGRect consoleLabelFrame = CGRectZero;
+    CGFloat y = debugTool_iPhoneX() ? 10 : 20;
     if (consoleLabel == self.cpuLabel) {
-        consoleLabelFrame = CGRectMake((kDebugScreenWidth - kDebugLabelWidth) / 2, 0, kDebugLabelWidth, kDebugLabelHeight);
+        consoleLabelFrame = CGRectMake((kDebugScreenWidth - kDebugLabelWidth) / 2, y, kDebugLabelWidth, kDebugLabelHeight);
     } else if (consoleLabel == self.fpsLabel) {
-        consoleLabelFrame = CGRectMake(kDebugScreenWidth - kDebugLabelWidth - KDebugMargin, 0, kDebugLabelWidth, kDebugLabelHeight);
+        consoleLabelFrame = CGRectMake(kDebugScreenWidth - kDebugLabelWidth - KDebugMargin, y, kDebugLabelWidth, kDebugLabelHeight);
     } else {
-        consoleLabelFrame = CGRectMake(KDebugMargin, 0, kDebugLabelWidth, kDebugLabelHeight);
+        consoleLabelFrame = CGRectMake(KDebugMargin, y, kDebugLabelWidth, kDebugLabelHeight);
     }
     [UIView animateWithDuration:0.3 animations:^{
         consoleLabel.frame = consoleLabelFrame;
